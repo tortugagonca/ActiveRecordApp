@@ -1,0 +1,39 @@
+﻿
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        Verifica se usuário existe
+    </title>
+    <script src="Scripts/angular.min.js"></script>
+    <!--<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.js" type="text/javascript"></script>-->
+    <script src="Scripts/angular-ui/ui-bootstrap.min.js" type="text/javascript"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.js" type="text/javascript"></script>
+    <script src="Scripts/jquery-3.0.0.min.js"></script>
+    <script src="Scripts/ResetPassword.js" type="text/javascript"></script>
+</head>
+<body>
+    <div ng-app="ResetPassword">
+        <div ng-controller="ResetPasswordController">
+
+            <form id="form1" runat="server">
+                Nome do usuário:
+                <input type="text" ng-model="nomeUsuario" />
+                <input type="button" value="Verifica se usuário existe" ng-click="VerificaUsuarioExiste({nomeUsuario})" />
+                <!--<%--<input type="button" value="Reset password" ng-click="ResetUserPassword()" />--%>
+                <%--runat="server"
+                id="btnUsuarioExiste"
+                text="Verifica se usuário existe"--%>
+                <%--<button ng-click="VerificaUsuarioExiste">Verifica se usuário existe</button>--%>-->
+                <br />
+                Resultado: <b> {{ResultadoExistenciaUsuario}}
+                @*<input type="text" readonly="readonly" ng-model="ResultadoExistenciaUsuario"></output>*@
+                </b>
+                                @*<asp:TextBox runat="server" ID="txtUsuarioExiste" ReadOnly="true"> </asp:TextBox>*@
+            </form>
+        </div>
+    </div>
+</body>
+</html>
